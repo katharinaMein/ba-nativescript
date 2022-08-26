@@ -1,0 +1,5 @@
+<StackLayout>
+    <TextField #notificationInput hint="Enter Notification" text=""></TextField>
+    <Button (tap)="onSendNotification(notificationInput.text)" text="Benachrichtigung senden" class="button button-primary"></Button>
+    <label *ngIf="notificationSentInfo" text="Notification wurde gesendet!"></label>
+</StackLayout>

@@ -1,0 +1,22 @@
+<StackLayout>
+    <Button (tap)="onGetLocation()" text="Get Location"></Button>
+    <label *ngIf="longitude" textAlignment="center" class="instruction">
+        <FormattedString>
+            <span text="Längengrad: "></span>
+            <span [text]="longitude"></span>
+        </FormattedString>
+    </label>
+    <label *ngIf="latitude" textAlignment="center" class="instruction">
+        <FormattedString>
+            <span text="Breitengrad: "></span>
+            <span [text]="latitude"></span>
+        </FormattedString>
+    </label>
+    <label *ngIf="accuracy" textAlignment="center" class="instruction">
+        <FormattedString>
+            <span text="Genauigkeit: "></span>
+            <span [text]="accuracy | number:'1.0-2'"></span>
+            <span text=" m"></span>
+        </FormattedString>
+    </label>
+</StackLayout>

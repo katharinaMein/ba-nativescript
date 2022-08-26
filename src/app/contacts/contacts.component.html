@@ -1,0 +1,12 @@
+<StackLayout>
+    <Button (tap)="onGetContact()" text="Get Contact"></Button>
+    <label *ngIf="contact" textAlignment="center" class="instruction">
+        <FormattedString>
+            <span [text]="contact.name.given"></span>
+            <span text=" "></span>
+            <span [text]="contact.name.family"></span>
+            <span text=": "></span>
+            <span [text]="contact.phoneNumbers[0].value"></span>
+        </FormattedString>
+    </label>
+</StackLayout>

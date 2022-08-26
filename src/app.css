@@ -1,6 +1,101 @@
-@import '@nativescript/theme/css/core.css';
-@import '@nativescript/theme/css/default.css';
 
-Button.-primary {
-  font-size: 18;
+/* @primary-color: #005EA7;
+@text-color: #252525;
+@light-text-color: #a4a4a4;
+@accent-color: #FFAE53;
+@disabled-color: #ABCAE2; */
+
+ActionBar{
+  background-color: white;
+  border: none;
+  box-shadow: none;
 }
+
+image{
+  width: 200px;
+}
+
+.main-header{
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: Calibri, sans-serif;
+  color: #252525;
+}
+
+.instruction{
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-block-start: 0;
+  color: #a4a4a4;
+  margin-bottom: 120px;
+}
+
+.button{
+  color: white;
+  margin-bottom: 50px;
+  text-decoration: none;
+  text-align: center;
+  width: 880px;
+  padding: 40px;
+  font-size: 20px;
+  border-radius: 25px;
+  font-family: Calibri, sans-serif;
+}
+
+.button-primary {
+  background-color: #005EA7;
+}
+
+.button-primary:active{
+  background-color: #FFAE53;
+}
+
+
+.button-disabled {
+  background-color: #ABCAE2;
+}
+
+.button-disabled:hover{
+  cursor: not-allowed;
+}
+
+a.home {
+  text-decoration: none;
+  font-size: 28px;
+  color: black;
+}
+
+a.home:visited{
+  color: black;
+}
+
+a.home:hover{
+  cursor: pointer;
+}
+
+
+button{
+  border: none;
+  font-family: Calibri, sans-serif;
+}
+
+.errorMessage{
+  color: red;
+}
+
+.successMessage{
+  color: green;
+}
+
+.textInput{
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+
+
+
+

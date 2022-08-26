@@ -1,0 +1,5 @@
+<StackLayout>
+    <label text="test"></label>
+    <Button (tap)="onGetImage()" text="Get Image"></Button>
+    <Image *ngIf="image.src" [src]="image.src" width="300"></Image>
+</StackLayout>

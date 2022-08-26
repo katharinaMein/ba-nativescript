@@ -1,0 +1,5 @@
+<StackLayout>
+    <Button (tap)="onTakePicture()" text="Open Camera"></Button>
+    <Label [text]="image.src | json"></Label>
+    <Image *ngIf="image.src" [src]="image.src" width="300"></Image>
+</StackLayout>

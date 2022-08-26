@@ -43,5 +43,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIBackgroundModes</key>
+    <array>
+      <string>location</string>
+    </array>
+    <key>NSContactsUsageDescription</key>
+    <string>Kindly provide permission to access contacts on your device.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Description text goes here</string>
 </dict>
 </plist>
