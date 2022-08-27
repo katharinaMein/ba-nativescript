@@ -1,0 +1,6 @@
+<StackLayout>
+    <Button *ngIf="!recording" (tap)="onClickRecordButton()" text="Record Audio" class="button button-primary"></Button>
+    <Button *ngIf="recording" (tap)="onClickRecordButton()" text="Stop Recording" class="button button-primary"></Button>
+    <label *ngIf="recording" text="Audio wird aufegnommen..." class="instruction"></label>
+    <Button *ngIf="audioRecorded" (tap)="onPlay()" text="Play Audio" class="button button-primary"></Button>
+</StackLayout>

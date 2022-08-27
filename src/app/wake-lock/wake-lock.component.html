@@ -1,0 +1,6 @@
+<StackLayout>
+    <Button *ngIf="!insomnia" (tap)="onToggleWakeLock()" text="Wake Lock aktivieren" class="button button-primary"></Button>
+    <Button *ngIf="insomnia" (tap)="onToggleWakeLock()" text="Wake Lock deaktivieren" class="button button-primary"></Button>
+    <label *ngIf="insomnia" text="Wake Lock ist aktiviert, der Bildschirm schließt sich nicht."></label>
+    <label *ngIf="!insomnia" text="Wake Lock ist deaktiviert, der Bildschirm schließt sich nach kurzer Zeit."></label>
+</StackLayout>

@@ -21,6 +21,8 @@
     "@nativescript/local-notifications": "^6.0.0",
     "@nativescript/social-share": "^2.1.0",
     "@nativescript/theme": "~3.0.2",
+    "nativescript-audio": "^6.2.6",
+    "nativescript-insomnia": "^2.0.0",
     "nativescript-permissions": "^1.3.12",
     "nativescript-vibrate": "^4.0.1",
     "rxjs": "~7.5.0",
