@@ -17,10 +17,12 @@ import { VibrationComponent } from './vibration/vibration.component';
 import { LocationComponent } from './location/location.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WakeLockComponent } from "~/app/wake-lock/wake-lock.component";
+import {HttpClientModule} from "@angular/common/http";
+
 
 @NgModule({
   bootstrap: [AppComponent],
-  imports: [NativeScriptModule, AppRoutingModule],
+  imports: [NativeScriptModule, AppRoutingModule, HttpClientModule],
   declarations:
     [
       AppComponent,

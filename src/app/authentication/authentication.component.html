@@ -1,0 +1,5 @@
+<StackLayout>
+    <Button (tap)="onAuthenticate()" text="Authentifizieren" class="button" [ngClass]="authenticationAvailable ? 'button-primary' : 'button-disabled'"></Button>
+    <label *ngIf="authenticationSuccess" text="Authentifizierung erfolgreich!"></label>
+    <label *ngIf="authenticationSuccess === false" text="Authentifizierung fehlgeschlagen!"></label>
+</StackLayout>

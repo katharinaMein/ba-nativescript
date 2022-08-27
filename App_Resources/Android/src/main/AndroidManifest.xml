@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="__PACKAGE__">
+		  xmlns:tools="http://schemas.android.com/tools"
+		  package="__PACKAGE__" >
 
 	<supports-screens
 		android:smallScreens="true"
 		android:normalScreens="true"
 		android:largeScreens="true"
 		android:xlargeScreens="true"/>
+
+	<uses-sdk
+			android:minSdkVersion="17"
+			android:targetSdkVersion="__APILEVEL__"
+			tools:overrideLibrary="com.jesusm.kfingerprintmanager"/>
 
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -30,6 +36,7 @@
 		android:theme="@style/AppTheme"
 		android:hardwareAccelerated="true">
 
+
 		<activity
 			android:name="com.tns.NativeScriptActivity"
 			android:label="@string/title_activity_kimera"
@@ -48,5 +55,6 @@
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
 	</application>
+
 </manifest>
 

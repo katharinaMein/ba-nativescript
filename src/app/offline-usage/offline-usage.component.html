@@ -1,0 +1,15 @@
+<ScrollView>
+    <StackLayout>
+        <label textWrap="true" textAlignment="center" *ngIf="isLoading">
+            <FormattedString>
+                <span text="Loading..."></span>
+            </FormattedString>
+        </label>
+        <label textWrap="true" textAlignment="center" *ngFor="let user of (usersArray$ | async)" class="main-header">
+            <FormattedString>
+                <span text="{{user.firstName + ' ' + user.lastName}}"></span>
+            </FormattedString>
+        </label>
+    </StackLayout>
+</ScrollView>
+
