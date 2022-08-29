@@ -1,5 +1,26 @@
 <StackLayout>
-    <label text="test"></label>
-    <Button (tap)="onGetImage()" text="Get Image"></Button>
-    <Image *ngIf="image.src" [src]="image.src" width="300"></Image>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf lokale Dateien"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke auf den Button, um ein auf deinem&#xa;"></span>
+                    <span text="Gerät gespeichertes Bild auszuwählen und&#xa;"></span>
+                    <span text="hier einzufügen."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button (tap)="onGetImage()" text="Bild auswählen" class="button button-primary" textTransform="none"></Button>
+    <Image *ngIf="image.src" [src]="image.src" width="300" class="image"></Image>
 </StackLayout>

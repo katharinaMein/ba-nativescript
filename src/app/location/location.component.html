@@ -1,18 +1,39 @@
 <StackLayout>
-    <Button (tap)="onGetLocation()" text="Get Location"></Button>
-    <label *ngIf="longitude" textAlignment="center" class="instruction">
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf GPS"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke auf den Button, um deinen aktuellen&#xa;"></span>
+                    <span text="Standort zu ermitteln."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button (tap)="onGetLocation()" text="Standort anzeigen" class="button button-primary" textTransform="none"></Button>
+    <label *ngIf="longitude" textAlignment="center" class="content-text single-line-text">
         <FormattedString>
             <span text="Längengrad: "></span>
             <span [text]="longitude"></span>
         </FormattedString>
     </label>
-    <label *ngIf="latitude" textAlignment="center" class="instruction">
+    <label *ngIf="latitude" textAlignment="center" class="content-text single-line-text">
         <FormattedString>
             <span text="Breitengrad: "></span>
             <span [text]="latitude"></span>
         </FormattedString>
     </label>
-    <label *ngIf="accuracy" textAlignment="center" class="instruction">
+    <label *ngIf="accuracy" textAlignment="center" class="content-text single-line-text">
         <FormattedString>
             <span text="Genauigkeit: "></span>
             <span [text]="accuracy | number:'1.0-2'"></span>

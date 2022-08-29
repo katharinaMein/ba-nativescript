@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FingerprintAuth, BiometricIDAvailableResult } from "@nativescript/fingerprint-auth";
+import {BackHomeService} from "~/app/backHome.service";
+
 
 @Component({
   selector: 'app-authentication',
@@ -9,9 +11,10 @@ import { FingerprintAuth, BiometricIDAvailableResult } from "@nativescript/finge
 export class AuthenticationComponent {
   private fingerprintAuth: FingerprintAuth;
   authenticationSuccess: boolean;
+  authenticationFailed: boolean;
   authenticationAvailable: boolean;
 
-  constructor() {
+  constructor(public bhS: BackHomeService) {
     this.fingerprintAuth = new FingerprintAuth();
   }
 
@@ -33,6 +36,6 @@ export class AuthenticationComponent {
         }
       })
       .catch((err) =>
-        this.authenticationSuccess = false);
+        this.authenticationFailed = true);
   }
 }

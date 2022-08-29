@@ -1,0 +1,47 @@
+<StackLayout>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf Bluetooth"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um nach Bluetooth-&#xa;"></span>
+                    <span text="Geräten in deiner Nähe zu suchen und&#xa;"></span>
+                    <span text="deren UUIDs (Universally Unique&#xa;"></span>
+                    <span text="Identifiers) ausgeben zulassen. Falls&#xa;"></span>
+                    <span text="Bluetooth noch nicht eingeschlatet ist,&#xa;"></span>
+                    <span text="erledigt die App dies für dich. Achte&#xa;"></span>
+                    <span text="auch darauf, dass der Standort aktiviert&#xa;"></span>
+                    <span text="ist. Auf einigen Geräten ist dies notwenig,&#xa;"></span>
+                    <span text="um die Bluetooth-Funktion nutzen zu können."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <StackLayout>
+        <button text="Geräte suchen" (tap)="onClickConnectButton()" class="button button-primary" textTransform="none"></button>
+        <label *ngIf="scanning" text="Geräte werden gesucht..." textWrap="true" textAlignment="center"></label>
+    </StackLayout>
+
+    <ScrollView>
+        <StackLayout>
+            <label *ngFor="let UUID of deviceUUIDArray" textWrap="true" textAlignment="center" class="foundDevices">
+                <FormattedString>
+                    <span text="{{UUID}}"></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ScrollView>
+</StackLayout>
+
+
+

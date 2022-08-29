@@ -1,5 +1,37 @@
 <StackLayout>
-    <Button (tap)="onAuthenticate()" text="Authentifizieren" class="button" [ngClass]="authenticationAvailable ? 'button-primary' : 'button-disabled'"></Button>
-    <label *ngIf="authenticationSuccess" text="Authentifizierung erfolgreich!"></label>
-    <label *ngIf="authenticationSuccess === false" text="Authentifizierung fehlgeschlagen!"></label>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Passwortlose&#xa;"></span>
+                    <span text="Authentifizierung"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um dich mit deinem&#xa;"></span>
+                    <span text="Fingerabdruck zu authentifizieren und dich&#xa;"></span>
+                    <span text="als User zu authentifizieren."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button *ngIf="!authenticationSuccess && !authenticationFailed"
+            (tap)="onAuthenticate()"
+            textTransform="none"
+            text="Passwortlos authentifizieren"
+            class="button"
+            [ngClass]="authenticationAvailable ? 'button-primary' : 'button-disabled'"></Button>
+    <label textWrap="true" textAlignment="center" class="content-instruction">
+        <FormattedString>
+            <span *ngIf="authenticationSuccess" text="Deine Identität wurde bestätigt!" class="successMessage"></span>
+            <span *ngIf="authenticationFailed" text="Authentifizierung fehlgeschlagen!" class="errorMessage"></span>
+        </FormattedString>
+    </label>
 </StackLayout>

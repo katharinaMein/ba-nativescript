@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { keepAwake, allowSleepAgain } from "nativescript-insomnia";
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-wake-lock',
@@ -9,7 +10,7 @@ import { keepAwake, allowSleepAgain } from "nativescript-insomnia";
 export class WakeLockComponent implements OnInit{
   insomnia = false;
 
-  constructor() {}
+  constructor(public bhS: BackHomeService) {}
 
   ngOnInit(): void {
   }

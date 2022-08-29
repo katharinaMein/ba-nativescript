@@ -1,6 +1,28 @@
 <StackLayout>
-    <Button (tap)="onGetContact()" text="Get Contact"></Button>
-    <label *ngIf="contact" textAlignment="center" class="instruction">
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf Kontakte"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um einen auf&#xa;"></span>
+                    <span text="deinem Gerät gespeicherten Kontakt&#xa;"></span>
+                    <span text="auszuwählen und hier anzeigen zu lassen."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button (tap)="onGetContact()" text="Kontakt auswählen" class="button button-primary" textTransform="none"></Button>
+    <label *ngIf="contact" textAlignment="center" class="content-text">
         <FormattedString>
             <span [text]="contact.name.given"></span>
             <span text=" "></span>

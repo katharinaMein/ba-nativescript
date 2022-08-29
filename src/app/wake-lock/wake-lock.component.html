@@ -1,6 +1,40 @@
 <StackLayout>
-    <Button *ngIf="!insomnia" (tap)="onToggleWakeLock()" text="Wake Lock aktivieren" class="button button-primary"></Button>
-    <Button *ngIf="insomnia" (tap)="onToggleWakeLock()" text="Wake Lock deaktivieren" class="button button-primary"></Button>
-    <label *ngIf="insomnia" text="Wake Lock ist aktiviert, der Bildschirm schließt sich nicht."></label>
-    <label *ngIf="!insomnia" text="Wake Lock ist deaktiviert, der Bildschirm schließt sich nach kurzer Zeit."></label>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="-3"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Screen Wake Lock"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um Screen Wake Lock&#xa;"></span>
+                    <span text="zu aktivieren und wieder zu deaktivieren."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button *ngIf="!insomnia" (tap)="onToggleWakeLock()" text="Aktiviere Screen Wake Lock"
+            class="button button-primary" textTransform="none"></Button>
+    <Button *ngIf="insomnia" (tap)="onToggleWakeLock()" text="Deaktiviere Screen Wake Lock"
+            class="button button-primary" textTransform="none"></Button>
+    <label *ngIf="insomnia" textWrap="true" textAlignment="center" class="content-text">
+        <FormattedString>
+            <span text="Screen Wake Lock ist nun aktiviert. Der&#xa;"></span>
+            <span text="Bildschirm sperrt sich nicht mehr."></span>
+        </FormattedString>
+    </label>
+    <label *ngIf="!insomnia" textWrap="true" textAlignment="center" class="content-text">
+        <FormattedString>
+            <span text="Screen Wake Lock ist gerade nicht aktiviert.&#xa;"></span>
+            <span text="Der Bildschirm sollte sich nah einer gewissen&#xa;"></span>
+            <span text="Zeit sperren."></span>
+        </FormattedString>
+    </label>
 </StackLayout>

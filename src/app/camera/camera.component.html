@@ -1,5 +1,27 @@
 <StackLayout>
-    <Button (tap)="onTakePicture()" text="Open Camera"></Button>
-    <Label [text]="image.src | json"></Label>
-    <Image *ngIf="image.src" [src]="image.src" width="300"></Image>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf Kamera"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um ein Foto mit der&#xa;"></span>
+                    <span text="Gerätekamera aufzunehmen und es hier&#xa;"></span>
+                    <span text="anzeigen zu lassen. Das Bild wird&#xa;"></span>
+                    <span text="automatisch in deiner Galerie gespeichert."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button (tap)="onTakePicture()" text="Foto aufnehmen" textTransform="none" class="button button-primary"></Button>
+    <Image *ngIf="image.src" [src]="image.src" width="300" class="image"></Image>
 </StackLayout>

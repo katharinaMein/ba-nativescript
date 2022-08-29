@@ -3,6 +3,7 @@ import {AudioRecorderOptions, TNSPlayer} from 'nativescript-audio';
 import {TNSRecorder} from 'nativescript-audio';
 import {knownFolders} from '@nativescript/core/file-system';
 import {catchError, EMPTY, from, Observable, of} from "rxjs";
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-microphone',
@@ -27,7 +28,7 @@ export class MicrophoneComponent {
     }
   };
 
-  constructor() {
+  constructor(public bhS: BackHomeService) {
   }
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
 <ScrollView>
-    <ActionBar flat="true">
+    <ActionBar flat="true" class="actionBarHome">
         <StackLayout>
-            <image src="~/assets/images/Check_mobile_icon.png" stretch="aspectFill"></image>
+            <image src="~/assets/images/CM_Logo.png" stretch="aspectFill" class="logo"></image>
             <label textWrap="true" textAlignment="center" class="main-header">
                 <FormattedString>
                     <span text="Lass uns sehen, was diese&#xa;"></span>
@@ -10,8 +10,8 @@
             </label>
             <label textWrap="true" textAlignment="center" class="instruction">
                 <FormattedString>
-                    <span text="Klicke einen Button, um eine Funktionalität zu&#xa;"></span>
-                    <span text="testen"></span>
+                    <span text="Drücke einen Button, um eine Funktionalität zu&#xa;"></span>
+                    <span text="testen."></span>
                 </FormattedString>
             </label>
         </StackLayout>
@@ -28,7 +28,7 @@
         <button text="Teilen in anderer App" class="button button-primary" textTransform="none" (tap)="onTapFunctionality('share')"></button>
         <button text="Zugriff auf Kontakte" class="button button-primary" textTransform="none" (tap)="onTapFunctionality('contacts')"></button>
         <button text="Screen Wake Lock" class="button button-primary" textTransform="none" (tap)="onTapFunctionality('wake-lock')"></button>
-        <button text="Barcode Scanner" class="button button-primary" textTransform="none" (tap)="onTapFunctionality('barcode')"></button>
+        <button text="Barcode Scanner" class="button button-disabled" textTransform="none"></button>
         <button text="Passwortlos authentifizieren" class="button button-primary" textTransform="none" (tap)="onTapFunctionality('authentication')"></button>
     </StackLayout>
 </ScrollView>

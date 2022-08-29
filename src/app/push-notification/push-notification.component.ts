@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalNotifications } from '@nativescript/local-notifications';
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-push-notification',
@@ -9,7 +10,7 @@ import { LocalNotifications } from '@nativescript/local-notifications';
 export class PushNotificationComponent {
   notificationSentInfo: false;
 
-  constructor() {}
+  constructor(public bhS: BackHomeService) {}
 
   ngOnInit(): void {
   }

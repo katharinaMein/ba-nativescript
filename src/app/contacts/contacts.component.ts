@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Contacts } from '@nativescript/contacts';
 import {requestPermissions} from "nativescript-permissions";
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-contacts',
@@ -10,7 +11,7 @@ import {requestPermissions} from "nativescript-permissions";
 export class ContactsComponent {
   contact: any;
 
-  constructor() {}
+  constructor(public bhS: BackHomeService) {}
 
   ngOnInit(): void {
 

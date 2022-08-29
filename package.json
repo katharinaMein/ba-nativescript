@@ -12,6 +12,7 @@
     "@angular/platform-browser": "~14.1.0",
     "@angular/platform-browser-dynamic": "~14.1.0",
     "@angular/router": "~14.1.0",
+    "@nativescript-community/ble": "^3.1.8",
     "@nativescript/angular": "^14.0.0",
     "@nativescript/camera": "^5.0.13",
     "@nativescript/contacts": "^2.0.4",

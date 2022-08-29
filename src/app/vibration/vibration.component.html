@@ -1,3 +1,24 @@
 <StackLayout>
-    <Button (tap)="onVibrate()" text="Vibrieren" class="button button-primary"></Button>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="-3"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf Vibrationsaktor"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um eine Vibration&#xa;"></span>
+                    <span text="auszulösen."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button (tap)="onVibrate()" text="Vibrieren" class="button button-primary" textTransform="none"></Button>
 </StackLayout>

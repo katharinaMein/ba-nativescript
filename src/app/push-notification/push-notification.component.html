@@ -1,5 +1,31 @@
 <StackLayout>
-    <TextField #notificationInput hint="Enter Notification" text=""></TextField>
-    <Button (tap)="onSendNotification(notificationInput.text)" text="Benachrichtigung senden" class="button button-primary"></Button>
-    <label *ngIf="notificationSentInfo" text="Notification wurde gesendet!"></label>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Push-Benachrichtigung"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Gib einen Text ein, den du gerne als&#xa;"></span>
+                    <span text="Push-Benachrichtigung an dein Gerät&#xa;"></span>
+                    <span text="senden möchtest. Wenn du anschließend&#xa;"></span>
+                    <span text="den Button drückst, solltest du die&#xa;"></span>
+                    <span text="Nachricht im Benachrichtigungsbereich&#xa;"></span>
+                    <span text="deines Geräts finden."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <TextField #notificationInput hint="Benachrichtigung..." text="" width="320" class="textInput"></TextField>
+    <Button (tap)="onSendNotification(notificationInput.text)" text="Senden"
+            class="button button-primary" textTransform="none"></Button>
+    <label *ngIf="notificationSentInfo" text="Notification wurde gesendet!" class="content-text" textAlignment="center"></label>
 </StackLayout>

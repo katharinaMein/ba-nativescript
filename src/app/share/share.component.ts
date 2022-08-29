@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as SocialShare from "@nativescript/social-share";
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-share',
@@ -8,7 +9,7 @@ import * as SocialShare from "@nativescript/social-share";
 })
 export class ShareComponent {
 
-  constructor() {}
+  constructor(public bhS: BackHomeService) {}
 
   ngOnInit(): void {
   }

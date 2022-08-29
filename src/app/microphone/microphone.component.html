@@ -1,6 +1,32 @@
 <StackLayout>
-    <Button *ngIf="!recording" (tap)="onClickRecordButton()" text="Record Audio" class="button button-primary"></Button>
-    <Button *ngIf="recording" (tap)="onClickRecordButton()" text="Stop Recording" class="button button-primary"></Button>
-    <label *ngIf="recording" text="Audio wird aufegnommen..." class="instruction"></label>
-    <Button *ngIf="audioRecorded" (tap)="onPlay()" text="Play Audio" class="button button-primary"></Button>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Zugriff auf Mikrofon"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Drücke den Button, um eine Audioaufnahme&#xa;"></span>
+                    <span text="zu starten und anschließend wieder zu&#xa;"></span>
+                    <span text="stoppen. Anschließend kannst du dir die&#xa;"></span>
+                    <span text="Aufnahme anhören."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <Button *ngIf="!recording" (tap)="onClickRecordButton()" text="Record Audio"
+            class="button" [ngClass]="audioRecorded ? 'button-disabled' : 'button-primary'" textTransform="none"></Button>
+    <Button *ngIf="recording" (tap)="onClickRecordButton()" text="Stop Recording"
+            class="button" [ngClass]="audioRecorded ? 'button-disabled' : 'button-primary'" textTransform="none"></Button>
+    <label *ngIf="recording" text="Audio wird aufgenommen..." textAlignment="center" class="content-text"></label>
+    <Button *ngIf="audioRecorded" (tap)="onPlay()" text="Play Audio"
+            class="button button-primary" textTransform="none"></Button>
 </StackLayout>

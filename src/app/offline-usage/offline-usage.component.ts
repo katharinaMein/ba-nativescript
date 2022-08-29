@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {catchError, map, Observable, of, pluck, startWith, tap} from "rxjs";
 import * as AppSettings from '@nativescript/core/application-settings';
+import {BackHomeService} from "~/app/backHome.service";
 
 interface User {
   firstName: string;
@@ -17,7 +18,7 @@ export class OfflineUsageComponent implements OnInit {
   usersArray$!: Observable<User[]>;
   isLoading = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public bhS: BackHomeService) { }
 
   ngOnInit() {
     this.isLoading = true;

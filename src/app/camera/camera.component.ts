@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { requestPermissions } from '@nativescript/camera';
 import * as camera from "@nativescript/camera";
 import { Image } from "@nativescript/core";
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-camera',
@@ -11,7 +12,7 @@ import { Image } from "@nativescript/core";
 export class CameraComponent {
   image = new Image();
 
-  constructor() {}
+  constructor(public bhS: BackHomeService) {}
 
   ngOnInit(): void {
   }

@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component} from '@angular/core';
 import * as imagepicker from "@nativescript/imagepicker";
 import {Image, ImageAsset} from "@nativescript/core";
+import {BackHomeService} from "~/app/backHome.service";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {Image, ImageAsset} from "@nativescript/core";
 })
 export class LocalFilesComponent {
   image = new Image();
-  constructor(private cdRef: ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef, public bhS: BackHomeService) {}
 
   async onGetImage(){
     let context = imagepicker.create({

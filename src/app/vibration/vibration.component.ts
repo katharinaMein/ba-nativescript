@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Vibrate } from 'nativescript-vibrate';
+import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
   selector: 'app-vibration',
@@ -10,7 +11,7 @@ export class VibrationComponent {
   vibrator = new Vibrate();
 
 
-  constructor() {}
+  constructor(public bhS: BackHomeService) {}
 
   ngOnInit(): void {
   }

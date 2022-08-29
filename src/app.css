@@ -9,18 +9,36 @@ ActionBar{
   background-color: white;
   border: none;
   box-shadow: none;
+  margin-left: -20;
 }
 
-image{
-  width: 200px;
+.actionBarHome{
+  margin-top: 25;
+}
+
+.actionBarComponent{
+  margin-top: 0;
+}
+
+.image{
+  width: 300;
+  margin-top: 20;
+}
+
+.logo{
+  width: 100;
+  margin-left: 20;
+  margin-bottom: 5;
 }
 
 .main-header{
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 30px;
+  margin-top: 20;
   font-family: Calibri, sans-serif;
   color: #252525;
+  margin-left: 20;
 }
 
 .instruction{
@@ -30,6 +48,28 @@ image{
   margin-block-start: 0;
   color: #a4a4a4;
   margin-bottom: 120px;
+  margin-left: 20;
+}
+
+.content-text{
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-block-start: 0;
+  color: #252525;
+  margin-bottom: 120px;
+}
+
+.single-line-text {
+  margin-bottom: 10;
+}
+
+.foundDevices{
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-block-start: 0;
+  color: #a4a4a4;
 }
 
 .button{
@@ -37,10 +77,12 @@ image{
   margin-bottom: 50px;
   text-decoration: none;
   text-align: center;
-  width: 880px;
+  width: 290;
   padding: 40px;
   font-size: 20px;
   border-radius: 25px;
+  box-shadow: 0 0 white;
+  border: none;
   font-family: Calibri, sans-serif;
 }
 
@@ -50,6 +92,8 @@ image{
 
 .button-primary:active{
   background-color: #FFAE53;
+  box-shadow: none;
+  outline: none;
 }
 
 
@@ -75,12 +119,6 @@ a.home:hover{
   cursor: pointer;
 }
 
-
-button{
-  border: none;
-  font-family: Calibri, sans-serif;
-}
-
 .errorMessage{
   color: red;
 }
@@ -90,9 +128,18 @@ button{
 }
 
 .textInput{
-  margin-bottom: 20px;
-  width: 100%;
-  padding: 10px 0;
+  margin-bottom: 20;
+
+}
+
+.back{
+  background-color: transparent;
+  width: 30;
+  font-size: 30px;
+  border: 0 solid transparent;
+  outline: 0px solid transparent;
+  box-shadow: none;
+  padding: 0;
 }
 
 

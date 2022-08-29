@@ -1,13 +1,38 @@
+<StackLayout>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Offline-Nutzung"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Nachdem die Namensliste geladen wurde,&#xa;"></span>
+                    <span text="schalte die Netzwerkverbindung ab und&#xa;"></span>
+                    <span text="verlasse die App. Wenn du die App nun&#xa;"></span>
+                    <span text="erneut öffnest, kannst du sie wie gewohnt&#xa;"></span>
+                    <span text="benutzen und siehst die Namen&#xa;"></span>
+                    <span text="immer noch."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
 <ScrollView>
     <StackLayout>
         <label textWrap="true" textAlignment="center" *ngIf="isLoading">
             <FormattedString>
-                <span text="Loading..."></span>
+                <span text="Namen werden geladen..."></span>
             </FormattedString>
         </label>
-        <label textWrap="true" textAlignment="center" *ngFor="let user of (usersArray$ | async)" class="main-header">
+        <label textWrap="true" textAlignment="center" *ngFor="let user of (usersArray$ | async)" class="single-line-text">
             <FormattedString>
-                <span text="{{user.firstName + ' ' + user.lastName}}"></span>
+                <span text="{{user.firstName + ' ' + user.lastName}}" class="content-text"></span>
             </FormattedString>
         </label>
     </StackLayout>

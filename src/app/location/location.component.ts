@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import * as geolocation from '@nativescript/geolocation';
 import {CoreTypes} from '@nativescript/core';
 import Accuracy = CoreTypes.Accuracy;
+import {BackHomeService} from "~/app/backHome.service";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class LocationComponent {
   longitude: any;
   accuracy: any;
 
-  constructor() {
+  constructor(public bhS: BackHomeService) {
   }
 
   ngOnInit(): void {

@@ -1,4 +1,26 @@
 <StackLayout>
-    <TextField #shareInput hint="Enter Text to Share" text=""></TextField>
-    <Button (tap)="onShareText(shareInput.text)" text="Share" class="button button-primary"></Button>
+    <ActionBar flat="true" class="actionBarComponent">
+        <StackLayout>
+            <AbsoluteLayout>
+                <Button text="&#8678;" (tap)="bhS.navigateToHome('home')" class="back" left="0"></Button>
+            </AbsoluteLayout>
+            <label textWrap="true" textAlignment="center" class="main-header">
+                <FormattedString>
+                    <span text="Teilen in einer anderen App"></span>
+                </FormattedString>
+            </label>
+            <label textWrap="true" textAlignment="center" class="instruction">
+                <FormattedString>
+                    <span text="Gib einen Text ein und drücke anschließend&#xa;"></span>
+                    <span text="auf den Share-Button, um den Text in einer&#xa;"></span>
+                    <span text="anderen App zu teilen."></span>
+                </FormattedString>
+            </label>
+        </StackLayout>
+    </ActionBar>
+</StackLayout>
+
+<StackLayout>
+    <TextField #shareInput hint="Text eingeben..." text="" width="320" class="textInput"></TextField>
+    <Button (tap)="onShareText(shareInput.text)" text="Share" class="button button-primary" textTransform="none"></Button>
 </StackLayout>
