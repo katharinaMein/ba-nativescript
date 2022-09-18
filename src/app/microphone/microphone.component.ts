@@ -21,7 +21,7 @@ export class MicrophoneComponent {
   options: AudioRecorderOptions = {
     filename: this.audioFolder.path + '/recording.mp4',
     infoCallback: info => {
-      //apparently necessary even if blank
+      //apparently necessary
     },
     errorCallback: e => {
       console.log('error cb', e);

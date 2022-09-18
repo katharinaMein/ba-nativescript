@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   onTapFunctionality(link: string){
-    this.routerExtensions.navigate([link]);
+    this.routerExtensions.navigate([link])
+      .then(r => console.log(r));
   }
 }

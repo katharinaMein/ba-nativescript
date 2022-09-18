@@ -3,11 +3,11 @@ import { LocalNotifications } from '@nativescript/local-notifications';
 import {BackHomeService} from "~/app/backHome.service";
 
 @Component({
-  selector: 'app-push-notification',
-  templateUrl: './push-notification.component.html',
-  styleUrls: ['./push-notification.component.css']
+  selector: 'app-notification',
+  templateUrl: './notification.component.html',
+  styleUrls: ['./notification.component.css']
 })
-export class PushNotificationComponent {
+export class NotificationComponent {
   notificationSentInfo: false;
 
   constructor(public bhS: BackHomeService) {}
@@ -19,7 +19,7 @@ export class PushNotificationComponent {
     LocalNotifications.hasPermission().then( function(){
       LocalNotifications.schedule([
         {
-          title: 'Ckeck Mobile Push-Notification',
+          title: 'Ckeck Mobile Notification',
           body: notificationInput,
           at: new Date(new Date().getTime() + 2000), // nach 2s
         },

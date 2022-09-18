@@ -22,11 +22,11 @@
 </StackLayout>
 
 <StackLayout>
-    <Button *ngIf="!recording" (tap)="onClickRecordButton()" text="Record Audio"
+    <Button *ngIf="!recording" (tap)="onClickRecordButton()" text="Audio aufnehmen"
             class="button" [ngClass]="audioRecorded ? 'button-disabled' : 'button-primary'" textTransform="none"></Button>
-    <Button *ngIf="recording" (tap)="onClickRecordButton()" text="Stop Recording"
+    <Button *ngIf="recording" (tap)="onClickRecordButton()" text="Aufnahme stoppen"
             class="button" [ngClass]="audioRecorded ? 'button-disabled' : 'button-primary'" textTransform="none"></Button>
     <label *ngIf="recording" text="Audio wird aufgenommen..." textAlignment="center" class="content-text"></label>
-    <Button *ngIf="audioRecorded" (tap)="onPlay()" text="Play Audio"
+    <Button *ngIf="audioRecorded" (tap)="onPlay()" text="Abspielen"
             class="button button-primary" textTransform="none"></Button>
 </StackLayout>

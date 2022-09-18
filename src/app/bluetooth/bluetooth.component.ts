@@ -27,7 +27,7 @@ export class BluetoothComponent {
             return;
           }
         }
-        this.onConnectToDevice();
+        this.onSearchDevices();
       }.bind(this)
     );
   }
@@ -36,7 +36,7 @@ export class BluetoothComponent {
     return this.bluetooth.enable();
   }
 
-  onConnectToDevice(){
+  onSearchDevices(){
     this.scanning = true;
     this.bluetooth.startScanning({
       seconds: 4,

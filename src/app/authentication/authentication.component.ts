@@ -28,7 +28,8 @@ export class AuthenticationComponent {
     this.fingerprintAuth
       .verifyFingerprint({
         title: 'Check Mobile App Authentication',
-        message: 'Bitte scanne deinen Finger, um dich als angemeldeter Nutzer des Geräts zu authentifizieren.',
+        message: 'Bitte scanne deinen Finger, um dich als angemeldeter ' +
+          'Nutzer des Geräts zu authentifizieren.',
       })
       .then((enteredPassword?: string) => {
         if (enteredPassword === undefined) {

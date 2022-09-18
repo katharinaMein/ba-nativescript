@@ -7,7 +7,7 @@ import {CameraComponent} from "./camera/camera.component";
 import {MicrophoneComponent} from "./microphone/microphone.component";
 import {LocalFilesComponent} from "./local-files/local-files.component";
 import {LocationComponent} from "./location/location.component";
-import {PushNotificationComponent} from "./push-notification/push-notification.component";
+import {NotificationComponent} from "./notification/notification.component";
 import {ShareComponent} from "./share/share.component";
 import {VibrationComponent} from "./vibration/vibration.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'microphone', component: MicrophoneComponent},
   {path: 'files', component: LocalFilesComponent},
   {path: 'location', component: LocationComponent},
-  {path: 'notification', component: PushNotificationComponent},
+  {path: 'notification', component: NotificationComponent},
   {path: 'share', component: ShareComponent},
   {path: 'vibration', component: VibrationComponent},
   {path: 'contacts', component: ContactsComponent},

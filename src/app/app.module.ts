@@ -9,7 +9,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { OfflineUsageComponent } from './offline-usage/offline-usage.component';
 import { CameraComponent } from './camera/camera.component';
 import { MicrophoneComponent } from './microphone/microphone.component';
-import { PushNotificationComponent } from './push-notification/push-notification.component';
+import { NotificationComponent } from './notification/notification.component';
 import { BluetoothComponent } from './bluetooth/bluetooth.component';
 import { LocalFilesComponent } from './local-files/local-files.component';
 import { ShareComponent } from './share/share.component';
@@ -28,7 +28,7 @@ import {HttpClientModule} from "@angular/common/http";
       OfflineUsageComponent,
       CameraComponent,
       MicrophoneComponent,
-      PushNotificationComponent,
+      NotificationComponent,
       BluetoothComponent,
       LocalFilesComponent,
       ShareComponent,

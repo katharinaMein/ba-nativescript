@@ -18,7 +18,7 @@ export class ContactsComponent {
   }
 
   onGetContact(){
-    requestPermissions([android.Manifest.permission.GET_ACCOUNTS, android.Manifest.permission.READ_CONTACTS], "I need these permissions because I'm cool").then(() => {
+    requestPermissions([android.Manifest.permission.GET_ACCOUNTS, android.Manifest.permission.READ_CONTACTS], "I need these permissions").then(() => {
       Contacts.getContact().then(function (args) {
           if (args.response === 'selected') {
             this.contact = args.data;

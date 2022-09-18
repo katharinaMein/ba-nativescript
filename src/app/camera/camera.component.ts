@@ -23,8 +23,6 @@ export class CameraComponent {
         // permission request accepted or already granted
         camera.takePicture()
           .then((imageAsset) => {
-            console.log("Result is an image asset instance");
-
             this.image.src = imageAsset;
           }).catch((err) => {
           console.log("Error -> " + err.message);

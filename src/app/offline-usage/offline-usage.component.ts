@@ -28,7 +28,6 @@ export class OfflineUsageComponent implements OnInit {
       tap((usersArray) => AppSettings.setString('nameArray', JSON.stringify(usersArray))),
       startWith(JSON.parse(AppSettings.getString('nameArray', '[]'))),
       catchError(err => {
-        alert(err);
         this.isLoading = false;
         throw err;
       })
